@@ -1,0 +1,8 @@
+poc/
+patch/
+build/
+out/
+*.o
+*.obj
+*.exe
+*.zip

@@ -1,0 +1,12 @@
+language: c
+fuzzing_engines:
+  - libfuzzer
+sanitizers:
+  - address
+fuzz_targets:
+  - cart_fuzzer
+  - savestate_fuzzer
+  - audio_fuzzer
+  - sprite_fuzzer
+  - font_fuzzer
+  - gpu_fuzzer

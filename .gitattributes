@@ -1,0 +1,10 @@
+# Normalize all text to LF in the repo so the Linux fuzzing build is unaffected
+# by Windows checkouts. Shell scripts must stay LF.
+* text=auto eol=lf
+*.sh text eol=lf
+*.c text eol=lf
+*.h text eol=lf
+*.py text eol=lf
+*.yaml text eol=lf
+*.md text eol=lf
+*.bin binary
