@@ -264,7 +264,7 @@ int nova_vm_step(nova_machine *mc)
     case OP_KILL:  { int h=vm_pop(vm); nova_world_kill(mc,h); break; }
     case OP_TICK:  nova_machine_tick(mc); break;
     case OP_SAVE:  nova_savestate_save(mc); break;
-    case OP_LOAD:  if (mc->save_region) nova_savestate_load(mc, mc->save_region, mc->save_size); break;
+    case OP_LOAD:  nova_synth_reload(mc); if (mc->save_region) nova_savestate_load(mc, mc->save_region, mc->save_size); break;
 
     default: vm->running = 0; break;
     }

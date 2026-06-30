@@ -231,6 +231,7 @@ typedef struct nova_voice {
     int        lfo_phase;
     uint32_t   osc_phase;
     int        cur_level;
+    nova_instr *cur_instr;
     struct nova_mod *pending;   /* queued LFO mod */
 } nova_voice;
 
@@ -403,6 +404,7 @@ void nova_synth_voice(nova_machine *mc, int chan, int instr);
 void nova_synth_note(nova_machine *mc, int chan, int pitch);
 void nova_synth_noteoff(nova_machine *mc, int chan);
 void nova_synth_tick(nova_machine *mc);
+void nova_synth_reload(nova_machine *mc);
 
 void nova_tracker_play(nova_machine *mc, int order);
 void nova_tracker_tick(nova_machine *mc);
